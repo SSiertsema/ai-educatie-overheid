@@ -73,7 +73,7 @@ const roles = [
 </script>
 
 <template>
-  <main>
+  <div>
     <PromoHeroSplit eyebrow="Persona-gebaseerd · publieke sector">
       <template #title>AI-scholing die écht landt — omdat we je mensen kennen.</template>
       <template #body>
@@ -81,8 +81,8 @@ const roles = [
         <p>Vaardigheid én veranderbereidheid in één traject. Geen generieke cursus.</p>
       </template>
       <template #cta>
-        <PromoBtn href="/kennismaking" variant="primary" size="l">Plan een kennismaking</PromoBtn>
-        <PromoBtn href="/ai-act-readiness" variant="ghost" size="l">Doe de AI Act-check</PromoBtn>
+        <PromoBtn to="/kennismaking" variant="primary" size="l">Plan een kennismaking</PromoBtn>
+        <PromoBtn to="/ai-act-readiness" variant="ghost" size="l">Doe de AI Act-check</PromoBtn>
       </template>
       <template #visual>
         <div class="hero-placeholder" aria-hidden="true">
@@ -139,10 +139,10 @@ const roles = [
       <template #title>Klaar voor een verkennend gesprek?</template>
       <template #body>30 minuten. We luisteren eerst. Geen verkooppraat.</template>
       <template #cta>
-        <PromoBtn href="/kennismaking" variant="inverse" size="l">Plan een kennismaking</PromoBtn>
+        <PromoBtn to="/kennismaking" variant="inverse" size="l">Plan een kennismaking</PromoBtn>
       </template>
     </PromoCTABanner>
-  </main>
+  </div>
 </template>
 
 <style lang="scss" scoped>
