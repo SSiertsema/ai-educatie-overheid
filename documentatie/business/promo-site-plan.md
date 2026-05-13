@@ -551,6 +551,7 @@ export default defineNuxtConfig({
 - ✅ **B1** Brand: design-system als basis, met marketing-overlay-laag (`--promo-*`-tokens bovenop DS) — uitgewerkt in §8a.3
 - ✅ **B3** Persona-explorer: niet in MVP; v1.2
 - ✅ **B4** Launch-partners: niet blokkerend voor MVP; soft-launch + content-injectie post-launch
+- ✅ **B14** Design-system-distributie: lange termijn via **npm-publish** (private of public, nog open). Huidige workspace-symlink in promotion-site is tijdelijke brug; switch naar versioned dep zodra publish er staat. Geen submodule-route.
 
 **Nog open**:
 
