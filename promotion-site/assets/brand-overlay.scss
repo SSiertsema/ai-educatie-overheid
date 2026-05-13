@@ -1,0 +1,45 @@
+/*
+ * Promo brand-overlay
+ * --------------------------------------------------------------
+ * Aanvullende tokens BOVENOP de design-system tokens.
+ * Strikt regel: deze laag overschrijft GEEN bestaande --* tokens
+ * uit de design-system. Alleen nieuwe --promo-* properties.
+ *
+ * Marketing-toon: warmer en narratiever dan de bestuurlijke DS
+ * (Navy/Blue/Green). De warme tegenkleur is een koper-amber
+ * die complementair zit op de DS Warm Sand (#f5f0e6).
+ */
+
+:root {
+  /* Hero / marketing CTA — warmer dan bestuurlijke navy */
+  --promo-cta-default: #c2611f;  /* koper-amber, 4.5:1 contrast op wit */
+  --promo-cta-hover: #a44e15;
+  --promo-cta-active: #883e0e;
+  --promo-cta-subtle: #faeadf;
+
+  /* Marketing-accent voor labels, eyebrow-tekst, decoratie */
+  --promo-accent-600: #8a5e0e;   /* dark amber, leest goed op wit én op warm-sand */
+  --promo-accent-500: #d99a2b;   /* matched aan DS warning-tone, mag in marketing */
+  --promo-accent-subtle: #fbf2e0;
+
+  /* Display-typografie iets ruimer dan body */
+  --promo-display-tracking-tight: -0.01em;
+  --promo-display-tracking-display: -0.02em;
+  --promo-display-leading-hero: 1.05;
+
+  /* Extra ritme-spacing voor marketing-secties (DS gaat tot 4xl/178px) */
+  --promo-section-y-s: 3rem;
+  --promo-section-y-m: 5rem;
+  --promo-section-y-l: 7rem;
+  --promo-section-y-xl: 10rem;
+
+  /* Container — marketing leest het beste op 1120px (DS-default) */
+  --promo-container: var(--container-max-width-default, 1200px);
+  --promo-container-narrow: var(--container-max-width-narrow, 720px);
+
+  /* Animatie / motion (lokaal — niet in DS) */
+  --promo-ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --promo-duration-fast: 120ms;
+  --promo-duration-base: 220ms;
+  --promo-duration-slow: 420ms;
+}

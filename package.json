@@ -2,11 +2,19 @@
   "name": "ai-educatie-docs",
   "version": "0.1.0",
   "private": true,
-  "description": "VitePress-site voor AI-educatie programma documentatie",
+  "description": "AI-educatie monorepo: VitePress-docs (root) + design-system + promotion-site",
+  "workspaces": [
+    "design-system",
+    "promotion-site"
+  ],
   "scripts": {
     "docs:dev": "vitepress dev",
     "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
+    "docs:preview": "vitepress preview",
+    "promo:dev": "npm --workspace promotion-site run dev",
+    "promo:build": "npm --workspace promotion-site run build",
+    "promo:generate": "npm --workspace promotion-site run generate",
+    "promo:preview": "npm --workspace promotion-site run preview"
   },
   "devDependencies": {
     "vitepress": "^1.6.0",

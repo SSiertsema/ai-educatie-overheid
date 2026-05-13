@@ -1,4 +1,18 @@
 node_modules/
+.DS_Store
+
+# VitePress
 .vitepress/dist/
 .vitepress/cache/
-.DS_Store
+
+# Nuxt (promotion-site)
+promotion-site/.nuxt/
+promotion-site/.output/
+promotion-site/dist/
+promotion-site/.data/
+promotion-site/.env
+
+# IDE / OS
+*.log
+.idea/
+.vscode/
