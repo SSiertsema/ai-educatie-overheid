@@ -1,0 +1,137 @@
+{
+  "version": "v1",
+  "title": "AI Act-readiness check",
+  "intro": "Tien korte vragen over jullie AI-gebruik, beleid en governance. Geen technische voorkennis nodig.",
+  "questions": [
+    {
+      "id": "tools-in-use",
+      "topic": "AI-inventaris",
+      "prompt": "Welke AI-tools worden actief gebruikt in jullie organisatie?",
+      "type": "multi",
+      "options": [
+        { "value": "copilot", "label": "Microsoft Copilot (M365 / Office)", "score": 1 },
+        { "value": "chatgpt", "label": "ChatGPT (publiek of enterprise)", "score": 1 },
+        { "value": "eigen", "label": "Eigen modellen of maatwerk-AI", "score": 1 },
+        { "value": "saas", "label": "AI-functies in vakapplicaties (zaaksysteem, GIS, etc.)", "score": 1 },
+        { "value": "geen", "label": "Geen — of we weten het niet zeker", "score": 0 }
+      ],
+      "weakIf": ["geen"]
+    },
+    {
+      "id": "policy-status",
+      "topic": "Beleid",
+      "prompt": "Is AI-gebruik beleidsmatig vastgelegd?",
+      "type": "single",
+      "options": [
+        { "value": "geen", "label": "Nog niet", "score": 0 },
+        { "value": "concept", "label": "Concept-richtlijn in omloop", "score": 1 },
+        { "value": "vastgesteld", "label": "Beleid is vastgesteld", "score": 2 },
+        { "value": "actueel", "label": "Vastgesteld én herzien in afgelopen jaar", "score": 3 }
+      ],
+      "weakIf": ["geen", "concept"]
+    },
+    {
+      "id": "training-coverage",
+      "topic": "Training",
+      "prompt": "Hebben medewerkers AI-training gehad?",
+      "type": "single",
+      "options": [
+        { "value": "geen", "label": "Nog niet structureel", "score": 0 },
+        { "value": "vrijblijvend", "label": "Vrijblijvend aanbod voor wie wil", "score": 1 },
+        { "value": "verplicht-sommige", "label": "Verplicht voor sommige rollen", "score": 2 },
+        { "value": "verplicht-alle", "label": "Verplicht voor iedereen die met AI werkt", "score": 3 }
+      ],
+      "weakIf": ["geen", "vrijblijvend"]
+    },
+    {
+      "id": "training-role-specific",
+      "topic": "Training",
+      "prompt": "Is de training afgestemd op de rol van de medewerker?",
+      "type": "single",
+      "options": [
+        { "value": "nee", "label": "Nee, één generieke training voor iedereen", "score": 0 },
+        { "value": "deels", "label": "Deels — basis voor iedereen, verdieping voor enkele rollen", "score": 1 },
+        { "value": "ja", "label": "Ja, leerpaden per rol of vakgebied", "score": 3 }
+      ],
+      "weakIf": ["nee"]
+    },
+    {
+      "id": "risk-classification",
+      "topic": "Governance",
+      "prompt": "Is er een risico-classificatie gemaakt voor jullie AI-toepassingen (in lijn met AI Act-categorieën)?",
+      "type": "single",
+      "options": [
+        { "value": "nee", "label": "Nee", "score": 0 },
+        { "value": "orienterend", "label": "Oriënterend, niet vastgelegd", "score": 1 },
+        { "value": "per-casus", "label": "Per casus uitgevoerd", "score": 2 },
+        { "value": "structureel", "label": "Structureel proces met documentatie", "score": 3 }
+      ],
+      "weakIf": ["nee", "orienterend"]
+    },
+    {
+      "id": "ownership",
+      "topic": "Governance",
+      "prompt": "Wie is eindverantwoordelijk voor AI in jullie organisatie?",
+      "type": "single",
+      "options": [
+        { "value": "niemand", "label": "Niemand specifiek", "score": 0 },
+        { "value": "it", "label": "IT-afdeling", "score": 1 },
+        { "value": "multidisciplinair", "label": "Multidisciplinair team (IT + jurist + functioneel)", "score": 2 },
+        { "value": "bestuurlijk", "label": "Bestuurlijk benoemd (CIO/CHRO/SG/DG)", "score": 3 }
+      ],
+      "weakIf": ["niemand", "it"]
+    },
+    {
+      "id": "register-dpia",
+      "topic": "Documentatie",
+      "prompt": "AI-register en DPIA's voor hoog-risico-systemen — op orde?",
+      "type": "single",
+      "options": [
+        { "value": "nee", "label": "Nee of niet bekend", "score": 0 },
+        { "value": "in-opbouw", "label": "In opbouw", "score": 1 },
+        { "value": "aanwezig", "label": "Aanwezig, maar niet recent geactualiseerd", "score": 2 },
+        { "value": "actueel", "label": "Actueel en periodiek herzien", "score": 3 }
+      ],
+      "weakIf": ["nee", "in-opbouw"]
+    },
+    {
+      "id": "supplier-ai",
+      "topic": "Leveranciers",
+      "prompt": "Heb je zicht op AI-gebruik door jullie leveranciers?",
+      "type": "single",
+      "options": [
+        { "value": "nee", "label": "Nee", "score": 0 },
+        { "value": "globaal", "label": "Globaal — niet contractueel verankerd", "score": 1 },
+        { "value": "per-contract", "label": "Bij belangrijke contracten gevraagd", "score": 2 },
+        { "value": "verankerd", "label": "Standaard contractueel verankerd", "score": 3 }
+      ],
+      "weakIf": ["nee", "globaal"]
+    },
+    {
+      "id": "incident-procedure",
+      "topic": "Operatie",
+      "prompt": "Is er een procedure voor onverwachte of foute AI-output?",
+      "type": "single",
+      "options": [
+        { "value": "nee", "label": "Nee", "score": 0 },
+        { "value": "informeel", "label": "Informeel — meld aan IT", "score": 1 },
+        { "value": "formeel", "label": "Formele procedure met escalatie", "score": 2 },
+        { "value": "logging", "label": "Formeel + met logging en evaluatie", "score": 3 }
+      ],
+      "weakIf": ["nee", "informeel"]
+    },
+    {
+      "id": "review-frequency",
+      "topic": "Cyclus",
+      "prompt": "Hoe vaak wordt het AI-beleid herzien?",
+      "type": "single",
+      "options": [
+        { "value": "nooit", "label": "Niet of niet bekend", "score": 0 },
+        { "value": "ad-hoc", "label": "Ad hoc, bij vragen of incidenten", "score": 1 },
+        { "value": "jaarlijks", "label": "Minimaal jaarlijks", "score": 2 },
+        { "value": "halfjaarlijks", "label": "Twee of meer keer per jaar", "score": 3 }
+      ],
+      "weakIf": ["nooit", "ad-hoc"]
+    }
+  ]
+}

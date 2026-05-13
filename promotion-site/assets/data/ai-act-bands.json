@@ -1,0 +1,72 @@
+{
+  "version": "v1",
+  "maxScore": 30,
+  "bands": [
+    {
+      "id": "beginstadium",
+      "label": "Beginstadium",
+      "minScore": 0,
+      "maxScore": 7,
+      "tone": "warning",
+      "headline": "Jullie staan aan het begin — en dat is op zich oké, maar er moet snel iets gebeuren.",
+      "summary": "AI-Act-geletterdheid is sinds februari 2025 een wettelijke plicht. In het beginstadium ontbreekt vaak het basisinzicht: welke AI-tools worden gebruikt, wie is er verantwoordelijk, en welk beleid geldt. Begin met inventarisatie en een minimum-set afspraken.",
+      "topPriorities": [
+        "AI-inventarisatie maken — welke tools worden ergens in de organisatie gebruikt?",
+        "Een eigenaar benoemen op bestuurlijk niveau",
+        "Minimale richtlijn opstellen en intern delen"
+      ]
+    },
+    {
+      "id": "op-weg",
+      "label": "Op weg",
+      "minScore": 8,
+      "maxScore": 15,
+      "tone": "info",
+      "headline": "Een goede start — nu de gaten dichten waar de wet specifiek op stuurt.",
+      "summary": "Jullie hebben de basics in beeld: een beleid in concept of vastgesteld, enige training, ergens een eigenaar. De volgende stap is dieper: rol-specifieke training, structurele risico-classificatie, en documentatie die een audit zou doorstaan.",
+      "topPriorities": [
+        "Training rol-specifiek maken — generieke modules zijn voor de Act onvoldoende",
+        "Risico-classificatie structureel uitvoeren en vastleggen",
+        "Leveranciers-AI in contracten opnemen"
+      ]
+    },
+    {
+      "id": "bijna-klaar",
+      "label": "Bijna klaar",
+      "minScore": 16,
+      "maxScore": 23,
+      "tone": "success",
+      "headline": "Stevig fundament — laatste stappen om aantoonbaar Act-compliant te zijn.",
+      "summary": "Veel onderdelen zijn op orde. Wat nu telt: kunnen aantonen — register actueel, training meetbaar, beleidscyclus draaiend. Op deze plek loont externe validatie of een interne audit.",
+      "topPriorities": [
+        "Register en DPIA's actueel houden via vaste cyclus",
+        "Adoptie van training meten (niet alleen completion)",
+        "Externe of interne audit overwegen vóór augustus 2026"
+      ]
+    },
+    {
+      "id": "voorbereid",
+      "label": "Voorbereid",
+      "minScore": 24,
+      "maxScore": 30,
+      "tone": "success",
+      "headline": "Voorbereid — focus op continuïteit en ketenverantwoordelijkheid.",
+      "summary": "Jullie organisatie heeft AI-governance ingebed. De aandacht verschuift naar borging: blijft het op niveau als personeel wisselt, hoe gaan jullie om met nieuwe AI-toepassingen, en hoe ondersteunen jullie partners (gemeenten, leveranciers, samenwerkingsverbanden) die nog niet zover zijn?",
+      "topPriorities": [
+        "Borging in de organisatie: kennis blijft bij vertrek van sleutelpersonen",
+        "Onboarding van nieuwe AI-toepassingen vóór livegang",
+        "Kennisdeling met partners en regionale netwerken"
+      ]
+    }
+  ],
+  "topicAdvice": {
+    "AI-inventaris": "Een actuele inventaris is de fundering. Zonder zicht op welke AI-tools waar worden gebruikt — inclusief schaduw-gebruik — is geen enkel ander stuk beleid betrouwbaar.",
+    "Beleid": "Een AI-beleid hoeft niet groot te zijn; wel vastgesteld, intern bekend, en jaarlijks herzien. Concept-richtlijnen worden door de Act niet geaccepteerd als bewijs van geletterdheid.",
+    "Training": "AI-geletterdheid (art. 4) vraagt structurele, op de rol toegespitste training. Vrijblijvende e-learning voor iedereen voldoet niet.",
+    "Governance": "Een benoemde eigenaar op bestuurlijk niveau, plus een multidisciplinair team voor besluitvorming, is wat toezichthouders zoeken.",
+    "Documentatie": "Voor hoog-risico AI-systemen (let op: veel publieke processen) zijn register én DPIA verplicht en moeten actueel zijn.",
+    "Leveranciers": "Sinds de Act ligt aansprakelijkheid niet enkel bij de leverancier. Contractuele afspraken over AI-gebruik bij ketenpartners zijn essentieel.",
+    "Operatie": "Een formele procedure voor incidenten — inclusief logging — is wat een audit toetsbaar maakt. Informele meldingen tellen niet.",
+    "Cyclus": "AI verandert snel; jaarlijkse herziening van beleid is een minimum, halfjaarlijks is realistisch in de huidige fase."
+  }
+}
